@@ -6,11 +6,11 @@ if (!isset($_SESSION['user_id'])) header("Location: index.php");
 $role = $_SESSION['role'];
 $user_id = $_SESSION['user_id'];
 
-$query = ($role === 'vet') 
-    ? "SELECT * FROM pets" 
-    : "SELECT * FROM pets WHERE owner_id = $user_id";
+// ✅ Show all pets to everyone
+$query = "SELECT * FROM pets";
 $pets = $conn->query($query);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
