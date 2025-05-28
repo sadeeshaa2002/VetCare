@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VetCare+ | Your All-in-One Pet Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #fdfdfd;
+      --text-color: #333;
+      --card-bg: #fff;
+      --primary-color: #0a3d62; /* dark blue shade */
+      --accent-color: #74b9ff;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --card-bg: #1e1e1e;
+      --primary-color: #1e3799;
+      --accent-color: #4a69bd;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--primary-color);
+      padding: 1rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .theme-toggle {
+      background: white;
+      color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('landing.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .feature-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      margin: 3rem 0 2rem;
+    }
+    .contact-vet {
+      background: var(--primary-color);
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    .contact-vet h2 {
+      margin-bottom: 1rem;
+    }
+    .contact-vet p {
+      margin: 0.5rem 0;
+    }
+    .contact-page {
+      padding: 2rem;
+      background: var(--card-bg);
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .contact-page h2 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .contact-page form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-page input, .contact-page textarea {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .contact-page button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>VetCare+</h2>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="adopt.php">Adopt</a>
+      <a href="Shopping.php">Shop</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Your Pet’s Digital Companion</h1>
+      <p>Care. Connect. Consult. All in One Place.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-users"></i>
+      <h3><a href="Community.php">Community Forum</a></h3>
+      <p>Engage with other pet owners, share tips, and ask questions.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-paw"></i>
+      <h3><a href="adopt.php">Pet Adoption</a></h3>
+      <p>Find your new best friend and notify instantly via email or Telegram.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-shopping-cart"></i>
+      <h3><a href="shopping.php">Shopping Cart</a></h3>
+      <p>Buy pet products and track sales through Power BI.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-robot"></i>
+      <h3><a href="chatbot.html">AI ChatBot</a></h3>
+      <p>24/7 assistant to help with your queries.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-comments"></i>
+      <h3><a href="chat.php">Live Chat</a></h3>
+      <p>Message and share files/images with your vet or adopter.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-calendar-check"></i>
+      <h3><a href="booking.html">Book a Vet</a></h3>
+      <p>Book appointments with veterinary experts online.</p>
+    </div>
+    
+    <div class="feature-card">
+      <i class="fas fa-blog"></i>
+      <h3><a href="#blog">Pet Care Blog</a></h3>
+      <p>Read useful tips and news to keep your pet healthy.</p>
+    </div>
+  </section>
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=25+George+E+De+Silva+Mawatha,+Kandy+20000&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <section class="contact-vet">
+    <h2>Contact a Vet</h2>
+    <p><strong>Phone:</strong> +94 77 123 4567</p>
+    <p><strong>Email:</strong> vetcareplus@example.com</p>
+    <p><strong>Available:</strong> Mon - Sat, 8AM - 6PM</p>
+  </section>
+
+  <section id="contact" class="contact-page">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 VetCare+. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute(
+        "data-theme",
+        currentTheme === "dark" ? "light" : "dark"
+      );
+    }
+  </script>
+</body>
+</html>

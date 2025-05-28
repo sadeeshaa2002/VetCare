@@ -1,0 +1,37 @@
+USE best_care_vet_zone;     // Methnata oyage database eke name ek dala use krl inn apache eke table tik hdnn yaddi 
+nathnm oy wen wenm databse hdnwnm ehem hri hdl ek use krl inna .....
+ita psse dbshop.php ekt gihin iye community ekt krpu tikm krnn db name eki mage password name ain krnn community eke db ekt krpu tik krnn  it psse me table thunam eke hadanna metika wen wenm run krnn hode  
+
+
+-- Table for products
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    price DECIMAL(10,2),
+    image VARCHAR(255)
+);
+
+-- Add sample products
+INSERT INTO products (name, price, image) VALUES
+('Dog Food', 20.00, 'dog_food.jpg'),
+('Cat Toy', 10.00, 'cat_toy.jpg'),
+('Bird Cage', 50.00, 'bird_cage.jpg');
+
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    customer_email VARCHAR(100),
+    order_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    name VARCHAR(100),
+    price DECIMAL(10,2),
+    quantity INT,
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
+ALTER TABLE products ADD image VARCHAR(255);
