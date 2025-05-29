@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Care Vet Zone - Online Consultation</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="booking-container">
+        <header class="booking-header">
+            <h1><i class="fas fa-paw"></i> Online Vet Consultation</h1>
+            <p>Schedule an appointment with our expert veterinarians</p>
+        </header>
+
+        <div class="booking-steps">
+            <div class="step active" data-step="1">
+                <span>1</span>
+                <p>Select Service</p>
+            </div>
+            <div class="step" data-step="2">
+                <span>2</span>
+                <p>Choose Vet</p>
+            </div>
+            <div class="step" data-step="3">
+                <span>3</span>
+                <p>Pick Date & Time</p>
+            </div>
+            <div class="step" data-step="4">
+                <span>4</span>
+                <p>Confirm Booking</p>
+            </div>
+        </div>
+
+           <div class="booking-content">
+          <!-- Step 1: Select Service -->
+            <div class="booking-step active" id="step-1">
+                <h2>What type of consultation do you need?</h2>
+                <div class="service-options">
+                    <div class="service-card" data-service="general">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>General Checkup</h3>
+                        <p>Routine examination for your pet's health</p>
+                        <span class="price">Rs.3500</span>
+                    </div>
+                    <div class="service-card" data-service="emergency">
+                        <i class="fas fa-ambulance"></i>
+                        <h3>Emergency Care</h3>
+                        <p>Urgent medical attention for your pet</p>
+                        <span class="price">Rs.5200</span>
+                    </div>
+                    <div class="service-card" data-service="dental">
+                        <i class="fas fa-tooth"></i>
+                        <h3>Dental Care</h3>
+                        <p>Oral health examination and cleaning</p>
+                        <span class="price">Rs.4800</span>
+                    </div>
+                    <div class="service-card" data-service="nutrition">
+                        <i class="fas fa-bone"></i>
+                        <h3>Nutrition Counseling</h3>
+                        <p>Dietary advice for your pet's needs</p>
+                        <span class="price">Rs.2600</span>
+                    </div>
+                </div>
+              <button class="btn next-btn" data-next="2">Next: Choose Vet</button>
+            </div>
+            
+
+            <!-- Step 2: Choose Vet -->
+            <div class="booking-step" id="step-2">
+                <h2>Select Your Preferred Veterinarian</h2>
+                <div class="vet-options">
+                    <div class="vet-card" data-vet="dr-perera">
+                        <img src="https://crownpet.lk/wp-content/uploads/2022/09/dr-s-kabilan.png" alt="Dr. Perera">
+                        <h3>Dr. Sandun Perera</h3>
+                        <p class="specialty">General Practice, Dental Care</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7 (128 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="vet-card" data-vet="dr-fernando">
+                        <img src="https://vet.pdn.ac.lk/staff/images/Rasanjali%20perera.jpg" alt="Dr. Fernando">
+                        <h3>Dr. Nimali Fernando</h3>
+                        <p class="specialty">Emergency Care, Surgery</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (92 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="vet-card" data-vet="dr-praveen">
+                        <img src="https://kumaranmedical.com/wp-content/uploads/2022/04/Dr-Praveen.jpg" alt="Dr.Praveen">
+                        <h3>Dr. Praveen Gamage</h3>
+                        <p class="specialty">Nutrition, Preventive Care</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2 (76 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn prev-btn" data-prev="1">Back</button>
+                    <button class="btn next-btn" data-next="3">Next: Date & Time</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Date & Time -->
+            <div class="booking-step" id="step-3">
+                <h2>Select Date and Time</h2>
+                <div class="datetime-selection">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="nav-btn prev-month"><i class="fas fa-chevron-left"></i></button>
+                            <h3 class="month-year">May 2023</h3>
+                            <button class="nav-btn next-month"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day-name">Sun</div>
+                            <div class="day-name">Mon</div>
+                            <div class="day-name">Tue</div>
+                            <div class="day-name">Wed</div>
+                            <div class="day-name">Thu</div>
+                            <div class="day-name">Fri</div>
+                            <div class="day-name">Sat</div>
+                            <!-- Days will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="time-slots-container">
+                        <h3>Available Time Slots</h3>
+                        <div class="time-slots">
+                            <!-- Time slots will be populated by JavaScript -->
+                            <p>Please select a date first</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn prev-btn" data-prev="2">Back</button>
+                    <button class="btn next-btn" data-next="4">Next: Confirm</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Confirm Booking -->
+            <div class="booking-step" id="step-4">
+                <h2>Confirm Your Appointment</h2>
+                <div class="booking-summary">
+                    <div class="summary-card">
+                        <h3>Appointment Details</h3>
+                        <div class="summary-item">
+                            <span>Service:</span>
+                            <span id="summary-service">General Checkup</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Veterinarian:</span>
+                            <span id="summary-vet">Dr. Nimali Fernando</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Date & Time:</span>
+                            <span id="summary-datetime">May 15, 2023 at 10:00 AM</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="summary-price"><Rs class="3500"></Rs></span>
+                        </div>
+                    </div>
+                    <div class="patient-info">
+                        <h3>Patient Information</h3>
+                        <form id="patient-form">
+                            <div class="form-group">
+                                <label for="pet-name">Pet's Name</label>
+                                <input type="text" id="pet-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pet-type">Pet Type</label>
+                                <select id="pet-type" required>
+                                    <option value="">Select</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="bird">Bird</option>
+                                    <option value="rabbit">Rabbit</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pet-age">Pet's Age</label>
+                                <input type="number" id="pet-age" min="0" max="30" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="concerns">Health Concerns</label>
+                                <textarea id="concerns" rows="3" placeholder="Briefly describe your pet's health concerns"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn prev-btn" data-prev="3">Back</button>
+                    <button class="btn confirm-btn" id="confirm-booking">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Confirmation Modal -->
+        <div class="modal" id="confirmation-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-check-circle"></i> Booking Confirmed!</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Your appointment has been successfully scheduled.</p>
+                    <div class="confirmation-details">
+                        <p><strong>Appointment ID:</strong> <span id="confirmation-id">VC-2023-0567</span></p>
+                        <p><strong>Date & Time:</strong> <span id="confirmation-time">May 15, 2023 at 10:00 AM</span></p>
+                        <p><strong>Veterinarian:</strong> <span id="confirmation-vet">Dr. Sarah Smith</span></p>
+                        <p>A confirmation has been sent to your email address.</p>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn" id="print-receipt">Print Receipt</button>
+                        <button class="btn" id="new-booking">Schedule Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+</html>

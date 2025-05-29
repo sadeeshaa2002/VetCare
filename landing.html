@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VetCare+ | Your All-in-One Pet Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #fdfdfd;
+      --text-color: #333;
+      --card-bg: #fff;
+      --primary-color: #0a3d62;
+      --accent-color: #74b9ff;
+      --blue-light: #a5d8ff;
+      --blue-mid: #74b9ff;
+      --blue-dark: #0a3d62;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --card-bg: #1e1e1e;
+      --primary-color: #1e3799;
+      --accent-color: #4a69bd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--primary-color);
+      padding: 1rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .theme-toggle {
+      background: white;
+      color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('landing.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 1rem;
+      background: var(--blue-dark);
+      animation: slideUp 1s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 300px;
+      margin: 1rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .offers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: var(--blue-mid);
+      padding: 2rem;
+    }
+
+    .offer-card {
+      background: var(--card-bg);
+      margin: 1rem;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: scale(1.05);
+    }
+
+    .offer-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .payment-section {
+      background: var(--blue-dark);
+      padding: 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    .payment-section i {
+      font-size: 2rem;
+      margin: 0 1rem;
+    }
+
+    .contact-vet {
+      background: var(--blue-dark);
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .contact-vet .info, .contact-vet .quick-links {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .quick-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .quick-links li {
+      margin: 0.5rem 0;
+    }
+
+    .quick-links a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: var(--primary-color);
+    }
+    
+    .map {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 400px;
+  overflow: hidden;
+  border: none;
+}
+
+.section-space {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+footer .payment-methods {
+  font-size: 1.5rem;
+}
+.book-now-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: var(--primary-color);
+}
+
+
+
+  </style>
+</head>
+<body>
+
+
+</style>
+</head>
+<body>
+  <header>
+    <h2>VetCare+</h2>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="adopt.php">Adopt</a>
+      <a href="Shopping.php">Shop</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Your Pet’s Digital Companion</h1>
+      <p>Care. Connect. Consult. All in One Place.</p>
+      <a href="booking.html" class="book-now-btn">Book Now</a>
+    </div>
+  </section>
+  
+
+  <h2 class="section-title section-space">Explore Our Services</h2>
+  
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-users"></i>
+      <h3><a href="Community.php">Community Forum</a></h3>
+      <p>Engage with other pet owners, share tips, and ask questions.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-paw"></i>
+      <h3><a href="adopt.php">Pet Adoption</a></h3>
+      <p>Find your new best friend and notify instantly via email or Telegram.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-shopping-cart"></i>
+      <h3><a href="shopping.php">Shopping Cart</a></h3>
+      <p>Buy pet products and track sales through Power BI.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-robot"></i>
+      <h3><a href="chatbot.html">AI ChatBot</a></h3>
+      <p>24/7 assistant to help with your queries.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-comments"></i>
+      <h3><a href="chat.php">Live Chat</a></h3>
+      <p>Message and share files/images with your vet or adopter.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-calendar-check"></i>
+      <h3><a href="booking.html">Book a Vet</a></h3>
+      <p>Book appointments with veterinary experts online.</p>
+    </div>
+    
+    <div class="feature-card">
+      <i class="fas fa-blog"></i>
+      <h3><a href="blog.html">Pet Care Blog</a></h3>
+      <p>Read useful tips and news to keep your pet healthy.</p>
+    </div>
+  </section>
+
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=25+George+E+De+Silva+Mawatha,+Kandy+20000&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  
+
+
+
+  <!-- Content before here stays unchanged -->
+
+  <h2 class="section-title">Special Offers</h2>
+  <section class="offers">
+    <div class="offer-card">
+      <img src="vetvisit.jpg" alt="Offer 1">
+      <h4>Free First Vet Visit</h4>
+      <p>Book your first consultation and get it free!</p>
+    </div>
+    <div class="offer-card">
+      <img src="offer2.jpg" alt="Offer 2">
+      <h4>20% Off Pet Food</h4>
+      <p>Exclusive discount on premium pet food brands.</p>
+    </div>
+    <div class="offer-card">
+      <img src="offer3.jpg" alt="Offer 3">
+      <h4>Grooming Package</h4>
+      <p>Full-service grooming package for all pets.</p>
+    </div>
+    <div class="offer-card">
+      <img src="offer4.jpg" alt="Offer 4">
+      <h4>Referral Bonus</h4>
+      <p>Refer a friend and get rewards!</p>
+    </div>
+  </section>
+
+
+  <section class="info-container" style="background: var(--blue-dark); color: white; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between;">
+  
+    <div class="info" style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+      <h3>Contact Us</h3>
+      <p><strong>Address:</strong> 123 Pet Street, Colombo, Sri Lanka</p>
+      <p><strong>Email:</strong> info@vetcareplus.lk</p>
+      <p><strong>Phone:</strong> +94 77 123 4567</p>
+    </div>
+    
+    <div class="quick-links" style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#" style="color: white; text-decoration: underline;">Adopt Me</a></li>
+        <li><a href="#" style="color: white; text-decoration: underline;">Shopping Cart</a></li>
+        <li><a href="#" style="color: white; text-decoration: underline;">Community Forum</a></li>
+        <li><a href="#" style="color: white; text-decoration: underline;">Vet Chat</a></li>
+        <li><a href="#" style="color: white; text-decoration: underline;">Hospital Locator</a></li>
+      </ul>
+    </div>
+    
+    <div class="payment-section" style="flex: 1; min-width: 250px; text-align: center; margin-bottom: 1rem;">
+      <h3>We Accept</h3>
+      <div class="payment-icons" style="font-size: 2rem;">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fas fa-wallet"></i>
+        <i class="fas fa-money-bill-wave"></i>
+      </div>
+    </div>
+  
+  </section>
+  
+
+  
+
+  <footer>
+    &copy; 2025 VetCare+. All rights reserved.
+  </footer>
+
+  <script>
+    // Keep your existing script content here
+  </script>
+</body>
+</html>
