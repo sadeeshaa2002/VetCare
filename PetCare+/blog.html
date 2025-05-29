@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Care Vet Zone - Pet Care Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Best Care Vet Zone</h1>
+                <p>Expert pet care advice</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="video-section">
+            <div class="video-container">
+                <div class="main-video">
+                    <div class="video-wrapper">
+                        <iframe id="featured-video" src="https://www.youtube.com/embed/o47dCAM4Ygw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h2 id="video-title">Learn the Basics of Pet Care from Expert Veterinarian</h2>
+                        <p id="video-description">Essential pet care tips covering nutrition, grooming, and health checkups from professional veterinarians.</p>
+                        <div class="video-meta">
+                            <span id="video-date">Published: May 15, 2023</span>
+                            <span id="video-views">1,245 views</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-sidebar">
+                    <h3>More Videos</h3>
+                    <div class="video-list" id="video-list">
+                        <!-- Videos will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div class="playlist-section">
+                        <h3>Featured Playlists</h3>
+                        <div class="playlist-grid" id="playlist-grid">
+                            <!-- Playlists will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles-section">
+            <div class="section-header">
+                <h2>Latest Pet Care Articles</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Topics</button>
+                    <button class="filter-btn" data-filter="dogs">Dogs</button>
+                    <button class="filter-btn" data-filter="cats">Cats</button>
+                    <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+                    <button class="filter-btn" data-filter="health">Health</button>
+                </div>
+            </div>
+            
+            <div class="articles-grid" id="articles-grid">
+                <!-- Articles will be loaded by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Best Care Vet Zone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating pets animation -->
+    <div class="floating-pets" id="floating-pets"></div>
+
+    <script src="blog.js"></script>
+</body>
+</html>

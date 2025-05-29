@@ -124,13 +124,13 @@ header h2 {
 }
 
 #cross:hover {
-  color: red;
+  color: rgb(146, 77, 236);
   transition: all .5s;
 }
 
 .chatbox .chat p.error {
   color: #ffffff;
-  background-color: #ff3737e8;
+  background-color: #904aebe8;
 }
 
 #sendBTN {
